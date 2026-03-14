@@ -28,7 +28,7 @@ if uploaded_file is not None:
                 messages=[
                     {
                         "role": "user",
-                        "content": f"You are a data analyst. Analyse this dataset and answer the question clearly and concisely.\n\nDataset (sample):\n{df.head(50).to_string()}\n\nFull dataset shape: {df.shape[0]} rows and {df.shape[1]} columns\n\nQuestion: {question}"
+                        "content": f"You are a data analyst. Analyse this dataset and answer the question clearly and concisely.\n\nDataset (sample):\n{df.head(10).to_string()}\n\nFull dataset shape: {df.shape[0]} rows and {df.shape[1]} columns\n\nQuestion: {question}"
                     }
                 ]
             )
