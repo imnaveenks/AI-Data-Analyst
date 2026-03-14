@@ -23,7 +23,7 @@ if uploaded_file is not None:
     if question:
         with st.spinner("🤔 Thinking..."):
             message = client.messages.create(
-                model="claude-sonnet-4-20250514",
+                model="claude-3-5-sonnet-20241022",
                 max_tokens=1024,
                 messages=[
                     {
