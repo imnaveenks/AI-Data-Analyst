@@ -1,11 +1,6 @@
 import streamlit as st
 import pandas as pd
 import anthropic
-
-# Initialize Anthropic client
-import streamlit as st
-import pandas as pd
-import anthropic
 from dotenv import load_dotenv
 import os
 
@@ -34,8 +29,10 @@ if uploaded_file is not None:
                     {
                         "role": "user",
                         "content": f"You are a data analyst. Analyse this dataset and answer the question clearly and concisely.\n\nDataset (sample):\n{df.head(50).to_string()}\n\nFull dataset shape: {df.shape[0]} rows and {df.shape[1]} columns\n\nQuestion: {question}"
+                    }
                 ]
             )
             st.write("### Answer:")
             st.write(message.content[0].text)
+
 
